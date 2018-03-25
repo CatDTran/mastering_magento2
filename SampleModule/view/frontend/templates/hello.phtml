@@ -1,0 +1,15 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: cattran
+ * Date: 3/25/18
+ * Time: 10:36 AM
+ */
+/** @var \Mastering\SampleModule\Block\Hello $block */
+?>
+
+<?php foreach ($block->getItems() as $item): ?>
+    <p>
+        <?php echo $item->getName(); ?>: <?php echo $item->getDescription()?>
+    </p>
+<?php endforeach;?>
