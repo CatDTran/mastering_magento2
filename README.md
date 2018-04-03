@@ -21,7 +21,7 @@ This README contains noteworthy tips, tricks, and solutions to common problems t
 
 #### + Magento 2 Interface:
 + When coding custom interfaces, a doc block must be provided, otherwise `main.CRITICAL: ... Message: Each getter must have a doc block` error will occur.
-+ For custom Api interfaces, a doc block like this will do: 
++ For custom Api interfaces, a doc block (aka annotation) like this will do (notice the `@return` annotation): 
 ```
 interface MyCustomInterface {
  /**
