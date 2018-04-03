@@ -6,6 +6,7 @@ This README contains noteworthy tips, tricks, and solutions to common problems t
 #### Tips:
 + When using Factory classes dependency injection, remember to run `setup:di:compile` to generate Factory classes code. Otherwise, errors will occur because Factory classes used in your custom module code will not be found. Run `cache:flush` to clear cache before refreshing the browser.
 + When defining a route, the url in the browser should be as follow: `frontName_controller_action`:
+
     -- `frontName` is the unique  url we defined for our module.
     -- `controller` name of the controller in our `Module_Name\Controller` directory.
     -- `action` action defined in `controller` file.
