@@ -19,5 +19,16 @@ This README contains noteworthy tips, tricks, and solutions to common problems t
 #### + Layout files:
 + Naming of layout files follows this convention so that controllers is able to find the right layout to render: `frontName_controller_action.xml`. For example, `Mastering/SampleModule/view/frontend/layout/mastering_index_index.xml` is rendered when `http://magento_domain.com\mastering\Index\Index` or `http://magento_domain.com\mastering` is visited.
 
+#### + Magento 2 Interface:
++ When coding custom interfaces, a doc block must be provided, otherwise `main.CRITICAL: ... Message: Each getter must have a doc block` error will occur.
++ For custom Api interfaces, a doc block like this will do: 
+```
+interface MyCustomInterface {
+ /**
+ * @return string
+ */
+ public function getName();
+ }
+```
 #### + Misc:
 + When starting a new module project, run `dev:urn-catalog:generate` to generates the catalog of URNs to `*.xsd` mappings for the IDE to highlight xml.
