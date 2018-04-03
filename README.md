@@ -14,7 +14,10 @@ This README contains noteworthy tips, tricks, and solutions to common problems t
     - `frontName` is the unique  url we defined for our module.
     - `controller` name of the controller in our `Module_Name\Controller` directory.
     - `action` action defined in `controller` file.
-    - For example, if we have `<route ... frontName="mastering">...</route>` defined in our `Mastering\SampleModule\etc\frontend\routes.xml`, and we have `Index.php` controller defined in `Mastering\SampleModule\Controller\Index.php`, and `Index` action defined in `Index.php` controller, our url should be: `magento_domain.com\mastering\Index\Index`. Note: By default `Index` controller and `Index` action is appended after `frontName` by default in the url, so we don't have to add `Index\Index` in the url and it would still work. Basically, `magento_domain.com\mastering\Index\Index` = `magento_domain.com\mastering`.
+    - For example, if we have `<route ... frontName="mastering">...</route>` defined in our `Mastering\SampleModule\etc\frontend\routes.xml`, and we have `Index.php` controller defined in `Mastering\SampleModule\Controller\Index.php`, and `Index` action defined in `Index.php` controller, our url should be: `http://magento_domain.com\mastering\Index\Index`. Note: By default `Index` controller and `Index` action is appended after `frontName` by default in the url, so we don't have to add `Index\Index` in the url and it would still work. Basically, `http://magento_domain.com\mastering\Index\Index` = `http://magento_domain.com\mastering`.
+
+#### + Layout files:
++ Naming of layout files follows this convention so that controllers is able to find the right layout to render: `frontName_controller_action`. For example, `SampleModule/view/frontend/layout/mastering_index_index.xml` is rendered when `http://magento_domain.com\mastering\Index\Index` or `http://magento_domain.com\mastering` is visited.
 
 #### + Misc:
 + When starting a new module project, run `dev:urn-catalog:generate` to generates the catalog of URNs to `*.xsd` mappings for the IDE to highlight xml.
